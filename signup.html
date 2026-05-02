@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup — मार्ग Way</title>
+    <meta name="description" content="Login or Sign up to मार्ग Way. Manage your EV rides, rentals, and bookings." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Cab</a></li>
+                <li><a href="rent.html">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="nav-cta active">Login/Signup</a></li>
+            </ul>
+
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== AUTH WRAPPER ========== -->
+    <main class="auth-page-wrapper">
+        <div class="auth-bg-blob blob-1"></div>
+        <div class="auth-bg-blob blob-2"></div>
+
+        <input type="checkbox" id="auth-toggle" checked>
+
+        <div class="auth-container">
+            <div class="auth-forms-track">
+
+                <div class="auth-form-side sign-in-side">
+                    <h2>Sign In</h2>
+                    <div class="social-login">
+                        <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <p style="text-align: center; color: var(--gray-light); font-size: 0.85rem; margin-bottom: 25px;">or use your email account</p>
+
+                    <form id="signin-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="signin-email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="signin-password" placeholder="••••••••" required>
+                        </div>
+                        <a href="#" style="font-size: 0.85rem; color: var(--accent); margin-bottom: 25px; display: inline-block;">Forgot password?</a>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; border-radius: 12px; height: 54px;">Sign In</button>
+                    </form>
+                </div>
+
+                <div class="auth-form-side sign-up-side">
+                    <h2>Create Account</h2>
+                    <div class="social-login">
+                        <a href="#" class="social-btn"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="signup-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="signup-email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" id="signup-password" placeholder="Min. 8 characters" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px; border-radius: 12px; height: 54px;">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="auth-overlay-side">
+                <div class="auth-overlay-content">
+                    <div class="msg-signup">
+                        <h2>New Here?</h2>
+                        <p>Sign up now to start your eco-friendly journey with us!</p>
+                        <label for="auth-toggle" class="auth-toggle-label">Create Account</label>
+                    </div>
+                    <div class="msg-signin">
+                        <h2>Already a Member?</h2>
+                        <p>Welcome back! Sign in to manage your rides and preferences.</p>
+                        <label for="auth-toggle" class="auth-toggle-label">Sign In</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

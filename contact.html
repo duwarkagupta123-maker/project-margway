@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — मार्ग Way</title>
+    <meta name="description"
+        content="Get in touch with मार्ग Way. Reach out for support, partnerships, or any queries about our ride-sharing and cab booking services." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Cab</a></li>
+                <li><a href="rent.html">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="nav-cta">Login/Signup</a></li>
+            </ul>
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-envelope"></i> Contact Us</h1>
+            <p>Have questions? We'd love to hear from you. Reach out anytime.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>Contact Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>मार्ग Way HQ, Chitkara University,<br />Chandigarh-Patiala National Highway, Punjab — 140401</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210<br />Mon–Sat, 9 AM – 8 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@margway.com<br />support@margway.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday – Saturday<br />9:00 AM – 8:00 PM IST</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2 class="section-title" style="text-align:left; font-size:1.6rem; margin-bottom:8px;">Send Us a
+                        Message</h2>
+                    <p style="color:var(--gray); margin-bottom:28px;">Fill out the form below and we'll get back to you
+                        within 24 hours.</p>
+
+                    <form id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" placeholder="Enter your full name" id="contact-name" />
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" placeholder="Enter your email" id="contact-email" />
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone</label>
+                                <input type="tel" placeholder="Enter your phone number" id="contact-phone" />
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-tag"></i> Subject</label>
+                                <select id="contact-subject">
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="booking">Booking Inquiry</option>
+                                    <option value="support">Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label><i class="fas fa-message"></i> Your Message</label>
+                                <textarea rows="5" placeholder="Write your message here..." id="contact-message"
+                                    style="resize: vertical;"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="button" class="btn btn-dark">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAP ========== -->
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13748.698627845264!2d76.6597!3d30.5161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1773459236230!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="मार्ग Way Office Location on Google Maps">
+        </iframe>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-logo">
+                        <i class="fas fa-route"></i>
+                        <span>मार्ग Way</span>
+                    </a>
+                    <p>Saving nature, one ride at a time. मार्ग Way is your 100% electric travel partner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="book.html">Book EV</a></li>
+                        <li><a href="rent.html">Rent EV</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="book.html">Electric Cabs</a></li>
+                        <li><a href="rent.html">EV Rentals</a></li>
+                        <li><a href="rent.html">E-Bikes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> hello@margway.com</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="contact.html"><i class="fas fa-location-dot"></i> Chitkara University, Punjab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent EV — मार्ग Way</title>
+    <meta name="description"
+        content="Rent electric cars and bikes on मार्ग Way. Zero emissions, zero noise, 100% fun." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Cab</a></li>
+                <li><a href="rent.html" class="active">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-cta">Login/Signup</a></li>
+            </ul>
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-key"></i> Rent an EV</h1>
+            <p>Choose from our fleet of high-performance electric cars and bikes.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>Rent EV</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VEHICLE CARDS ========== -->
+    <section class="rent-section">
+        <div class="container">
+            <h2 class="section-title">Available Electric Vehicles</h2>
+            <p class="section-subtitle">Experience the power of silence and sustainability.</p>
+
+            <div class="rent-grid">
+                <!-- Tesla -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/sedan.png" alt="Tesla Model 3" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>Tesla Model 3</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user-group"></i> 5 Seats</span>
+                            <span><i class="fas fa-bolt"></i> 490km Range</span>
+                            <span><i class="fas fa-gear"></i> Autopilot</span>
+                        </div>
+                        <div class="vehicle-card-price">₹4,999 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=tesla" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MG -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/suv.png" alt="MG ZS EV" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>MG ZS EV</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user-group"></i> 5 Seats</span>
+                            <span><i class="fas fa-bolt"></i> 461km Range</span>
+                            <span><i class="fas fa-gear"></i> Automatic</span>
+                        </div>
+                        <div class="vehicle-card-price">₹3,499 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=mg" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tata -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/tata_nexon.png" alt="Tata Nexon EV" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>Tata Nexon EV</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user-group"></i> 5 Seats</span>
+                            <span><i class="fas fa-bolt"></i> 453km Range</span>
+                            <span><i class="fas fa-certificate"></i> Top Safety</span>
+                        </div>
+                        <div class="vehicle-card-price">₹2,499 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=tata" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sport Bike -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/bike.png" alt="Ultraviolette F77" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>Ultraviolette F77</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user"></i> 2 Seats</span>
+                            <span><i class="fas fa-bolt"></i> 307km Range</span>
+                            <span><i class="fas fa-gauge-high"></i> 150 km/h</span>
+                        </div>
+                        <div class="vehicle-card-price">₹1,299 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=f77" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scooter -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/ather_450x.png" alt="Ather 450X" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>Ather 450X</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user"></i> 2 Seats</span>
+                            <span><i class="fas fa-bolt"></i> 146km Range</span>
+                            <span><i class="fas fa-charging-station"></i> Fast Charge</span>
+                        </div>
+                        <div class="vehicle-card-price">₹499 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=ather" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bicycle -->
+                <div class="vehicle-card">
+                    <div class="vehicle-card-image">
+                        <img src="images/bicycle.png" alt="Smart E-Bicycle" />
+                    </div>
+                    <div class="vehicle-card-body">
+                        <h3>Smart E-Bicycle</h3>
+                        <div class="vehicle-card-meta">
+                            <span><i class="fas fa-user"></i> 1 Rider</span>
+                            <span><i class="fas fa-leaf"></i> Zero Effort</span>
+                            <span><i class="fas fa-gears"></i> 7-Speed</span>
+                        </div>
+                        <div class="vehicle-card-price">₹199 <small>/ day</small></div>
+                        <a href="rent-form.html?vehicle=bicycle" class="btn btn-dark">
+                            <i class="fas fa-key"></i> Rent Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Rental Plan?</h2>
+                <p>Contact us for weekly, monthly, or corporate rental plans with special discounts.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-logo">
+                        <i class="fas fa-route"></i>
+                        <span>मार्ग Way</span>
+                    </a>
+                    <p>Saving nature, one ride at a time. मार्ग Way is your 100% electric travel partner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="book.html">Book EV</a></li>
+                        <li><a href="rent.html">Rent EV</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="book.html">Electric Cabs</a></li>
+                        <li><a href="rent.html">EV Rentals</a></li>
+                        <li><a href="rent.html">E-Bikes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> hello@margway.com</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="contact.html"><i class="fas fa-location-dot"></i> Chitkara University, Punjab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

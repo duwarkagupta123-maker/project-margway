@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing & Payment — मार्ग Way</title>
+    <meta name="description" content="Review your booking and complete secure payment." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #f0f4fa;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .invoice-title h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: #0b1120;
+        }
+        .invoice-title p {
+            color: #8892a4;
+        }
+        .invoice-details {
+            margin-bottom: 30px;
+        }
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f4fa;
+        }
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        .detail-value {
+            color: #0b1120;
+            text-align: right;
+            max-width: 60%;
+        }
+        .total-row {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .total-row h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: #0b1120;
+            margin: 0;
+        }
+        .total-row .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a6dff;
+        }
+        .payment-methods {
+            margin-top: 40px;
+        }
+        .payment-methods h4 {
+            margin-bottom: 15px;
+            color: #0b1120;
+        }
+        .payment-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .payment-option {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .payment-option:hover, .payment-option.selected {
+            border-color: #1a6dff;
+            background: rgba(26, 109, 255, 0.05);
+        }
+        .payment-option i {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+        .payment-option.selected i {
+            color: #1a6dff;
+        }
+        
+        @media (max-width: 768px) {
+            .invoice-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .invoice-header div[style] {
+                text-align: center !important;
+            }
+            .payment-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Cab</a></li>
+                <li><a href="rent.html">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-cta">Login/Signup</a></li>
+            </ul>
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header" style="padding: 120px 0 60px;">
+        <div class="container">
+            <h1><i class="fas fa-file-invoice-dollar"></i> Billing & Payment</h1>
+            <p>Review your booking details and complete your secure payment.</p>
+        </div>
+    </section>
+
+    <!-- ========== INVOICE ========== -->
+    <section class="form-section" style="padding: 60px 0 100px; background: #f0f4fa;">
+        <div class="container">
+            <div class="invoice-container">
+                <div class="invoice-header">
+                    <div class="invoice-title">
+                        <h2>Order Summary</h2>
+                        <p id="order-id">Booking ID: #MW-0000</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <h3 style="color: #1a6dff;"><i class="fas fa-leaf"></i> Zero Emissions</h3>
+                        <p style="color: #8892a4; font-size: 0.9rem;">Thank you for saving nature.</p>
+                    </div>
+                </div>
+
+                <div class="invoice-details" id="invoice-details">
+                    <!-- Dynamic details injected via JS -->
+                </div>
+
+                <div class="payment-methods">
+                    <h4>Select Payment Method</h4>
+                    <div class="payment-options">
+                        <div class="payment-option selected" onclick="selectPayment(this)">
+                            <i class="fab fa-cc-visa"></i><br>Credit/Debit Card
+                        </div>
+                        <div class="payment-option" onclick="selectPayment(this)">
+                            <i class="fas fa-mobile-alt"></i><br>UPI / Wallets
+                        </div>
+                        <div class="payment-option" onclick="selectPayment(this)">
+                            <i class="fas fa-money-bill-wave"></i><br>Pay on Spot
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%; justify-content: center; padding: 18px; font-size: 1.1rem; border-radius: 12px; height: auto;" onclick="confirmPayment()">
+                        <i class="fas fa-lock"></i> Confirm & Pay Securely
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-logo">
+                        <i class="fas fa-route"></i>
+                        <span>मार्ग Way</span>
+                    </a>
+                    <p>Saving nature, one ride at a time. मार्ग Way is your 100% electric travel partner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="book.html">Book EV</a></li>
+                        <li><a href="rent.html">Rent EV</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="book.html">Electric Cabs</a></li>
+                        <li><a href="rent.html">EV Rentals</a></li>
+                        <li><a href="rent.html">E-Bikes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> hello@margway.com</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="contact.html"><i class="fas fa-location-dot"></i> Chitkara University, Punjab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/billing.js"></script>
+</body>
+
+</html>

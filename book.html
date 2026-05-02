@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Electric Cab — मार्ग Way</title>
+    <meta name="description"
+        content="Book your zero-emission electric cab with मार्ग Way. Choose your pickup, drop, and travel guilt-free." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html" class="active">Book Cab</a></li>
+                <li><a href="rent.html">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-cta">Login/Signup</a></li>
+            </ul>
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-taxi"></i> Book an Electric Cab</h1>
+            <p>Enter your details below and book your zero-emission ride in seconds.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>Book EV</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOOKING FORM ========== -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title" style="margin-bottom: 8px;">Ride Details</h2>
+                <p class="section-subtitle" style="margin-bottom: 36px;">Fill in the details to book your cab. We'll
+                    find the best ride for you!</p>
+
+                <form id="bookForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+                            <input type="text" placeholder="Enter pickup location" id="pickup-location" />
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-flag-checkered"></i> Drop Location</label>
+                            <input type="text" placeholder="Enter drop location" id="drop-location" />
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Date</label>
+                            <input type="date" id="ride-date" />
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-clock"></i> Time</label>
+                            <input type="time" id="ride-time" />
+                        </div>
+                        <div class="form-group full-width">
+                            <label><i class="fas fa-car-side"></i> Vehicle Type</label>
+                            <select id="vehicle-type">
+                                <option value="" disabled selected>Select EV type</option>
+                                <option value="sedan">Electric Sedan</option>
+                                <option value="suv">Electric SUV</option>
+                                <option value="hatchback">Electric Hatchback</option>
+                                <option value="luxury">Luxury EV</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label><i class="fas fa-users"></i> Number of Passengers</label>
+                            <select id="passengers">
+                                <option value="" disabled selected>Select passengers</option>
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5+ Passengers</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="button" class="btn btn-dark">
+                            <i class="fas fa-check-circle"></i> Book My Ride
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-logo">
+                        <i class="fas fa-route"></i>
+                        <span>मार्ग Way</span>
+                    </a>
+                    <p>Saving nature, one ride at a time. मार्ग Way is your 100% electric travel partner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="book.html">Book EV</a></li>
+                        <li><a href="rent.html">Rent EV</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="book.html">Electric Cabs</a></li>
+                        <li><a href="rent.html">EV Rentals</a></li>
+                        <li><a href="rent.html">E-Bikes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> hello@margway.com</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="contact.html"><i class="fas fa-location-dot"></i> Chitkara University, Punjab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+
+</html>
