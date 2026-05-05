@@ -60,10 +60,18 @@
                         <div class="form-group">
                             <label><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
                             <input type="text" placeholder="Enter pickup location" id="pickup-location" />
+                            <div style="margin-top: 5px;">
+                                <input type="checkbox" id="save-home-pickup" style="width: auto; margin-right: 5px;"> <label for="save-home-pickup" style="font-size: 0.85rem; font-weight: normal; color: #8892a4; display: inline;">Save as Home</label>
+                                <button type="button" id="use-home-pickup" style="display: none; background: none; border: none; color: #1a6dff; font-size: 0.85rem; cursor: pointer; float: right; padding: 0;">Use Home</button>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label><i class="fas fa-flag-checkered"></i> Drop Location</label>
                             <input type="text" placeholder="Enter drop location" id="drop-location" />
+                            <div style="margin-top: 5px;">
+                                <input type="checkbox" id="save-home-drop" style="width: auto; margin-right: 5px;"> <label for="save-home-drop" style="font-size: 0.85rem; font-weight: normal; color: #8892a4; display: inline;">Save as Home</label>
+                                <button type="button" id="use-home-drop" style="display: none; background: none; border: none; color: #1a6dff; font-size: 0.85rem; cursor: pointer; float: right; padding: 0;">Use Home</button>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label><i class="fas fa-calendar-alt"></i> Date</label>
@@ -94,6 +102,10 @@
                                 <option value="5">5+ Passengers</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div id="live-fare-cab" style="text-align: center; font-size: 1.1rem; font-weight: bold; color: #28a745; margin-bottom: 20px; display: none;">
+                        Estimated Fare: <span id="fare-amount-cab">₹0</span> <span style="font-size: 0.85rem; color: #8892a4; font-weight: normal;">(₹50 Base + ₹15/km)</span>
                     </div>
 
                     <div class="form-submit">

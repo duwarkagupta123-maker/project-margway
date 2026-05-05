@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contactFormBtn = document.querySelector("#contactForm .btn-dark");
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+        // Live Form Validation: Real-time listeners
+        const contactInputs = contactForm.querySelectorAll("input, textarea");
+        contactInputs.forEach(input => {
+            input.addEventListener("input", (e) => {
+                const val = e.target.value.trim();
+                if (val === "") {
+                    e.target.style.border = "2px solid red";
+                } else if (e.target.type === "email" && !val.includes("@")) {
+                    e.target.style.border = "2px solid red";
+                } else {
+                    e.target.style.border = "2px solid green";
+                }
+            });
+        });
+    }
+
     if (contactFormBtn) {
         contactFormBtn.addEventListener("click", () => {
             const name = document.getElementById("contact-name").value;

@@ -53,9 +53,33 @@
             <h2 class="section-title">Available Electric Vehicles</h2>
             <p class="section-subtitle">Experience the power of silence and sustainability.</p>
 
+            <style>
+                .filter-btn {
+                    background: transparent;
+                    color: #0b1120;
+                    border: 2px solid #e8ecf4;
+                    transition: all 0.3s ease;
+                }
+                .filter-btn:hover {
+                    border-color: #1a6dff;
+                    color: #1a6dff;
+                }
+                .filter-btn.active {
+                    background: linear-gradient(135deg, #1a6dff, #00d4ff);
+                    color: #ffffff;
+                    border: 2px solid transparent;
+                    box-shadow: 0 6px 24px rgba(26, 109, 255, 0.35);
+                }
+            </style>
+            <div class="filter-buttons" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px;">
+                <button class="btn filter-btn active" data-filter="all" onclick="filterVehicles('all', this)">All</button>
+                <button class="btn filter-btn" data-filter="car" onclick="filterVehicles('car', this)">Cars</button>
+                <button class="btn filter-btn" data-filter="bike" onclick="filterVehicles('bike', this)">Bikes</button>
+            </div>
+
             <div class="rent-grid">
                 <!-- Tesla -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="car">
                     <div class="vehicle-card-image">
                         <img src="images/sedan.png" alt="Tesla Model 3" />
                     </div>
@@ -74,7 +98,7 @@
                 </div>
 
                 <!-- MG -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="car">
                     <div class="vehicle-card-image">
                         <img src="images/suv.png" alt="MG ZS EV" />
                     </div>
@@ -93,7 +117,7 @@
                 </div>
 
                 <!-- Tata -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="car">
                     <div class="vehicle-card-image">
                         <img src="images/tata_nexon.png" alt="Tata Nexon EV" />
                     </div>
@@ -112,7 +136,7 @@
                 </div>
 
                 <!-- Sport Bike -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="bike">
                     <div class="vehicle-card-image">
                         <img src="images/bike.png" alt="Ultraviolette F77" />
                     </div>
@@ -131,7 +155,7 @@
                 </div>
 
                 <!-- Scooter -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="bike">
                     <div class="vehicle-card-image">
                         <img src="images/ather_450x.png" alt="Ather 450X" />
                     </div>
@@ -150,7 +174,7 @@
                 </div>
 
                 <!-- Bicycle -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-type="bike">
                     <div class="vehicle-card-image">
                         <img src="images/bicycle.png" alt="Smart E-Bicycle" />
                     </div>
@@ -237,6 +261,7 @@
     </footer>
 
     <script src="js/auth.js"></script>
+    <script src="js/booking.js"></script>
 </body>
 
 </html>

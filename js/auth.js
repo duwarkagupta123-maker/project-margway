@@ -72,7 +72,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (signupForm) {
-        signupForm.addEventListener("input", () => hideMessage(signupForm));
+        // Live Form Validation: Real-time listeners
+        const signupInputs = signupForm.querySelectorAll("input");
+        signupInputs.forEach(input => {
+            input.addEventListener("input", (e) => {
+                hideMessage(signupForm);
+                const val = e.target.value.trim();
+                if (val === "") {
+                    e.target.style.border = "2px solid red";
+                } else if (e.target.type === "email" && !val.includes("@")) {
+                    e.target.style.border = "2px solid red";
+                } else {
+                    e.target.style.border = "2px solid green";
+                }
+            });
+        });
+
         signupForm.addEventListener("submit", (e) => {
             e.preventDefault();
             const name = document.getElementById("signup-name").value.trim();
@@ -184,8 +199,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             <i class="fas fa-user-circle"></i> ${currentUser.name.split(' ')[0]}
                         </a>
                         <div class="dropdown-content" style="display: none; position: absolute; top: 100%; right: 0; background-color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-radius: 12px; z-index: 9999; min-width: 160px; overflow: hidden; margin-top: 5px; border: 1px solid #eee;">
-                            <a href="#" style="color: #333; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0;">Profile Settings</a>
-                            <a href="#" id="logout-btn" style="color: #ff4d4f; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem;">Logout</a>
+                            <a href="history.html" style="color: #333; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0;"><i class="fas fa-history" style="width: 20px;"></i> Booking History</a>
+                            <a href="#" style="color: #333; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0;"><i class="fas fa-cog" style="width: 20px;"></i> Profile Settings</a>
+                            <a href="#" id="logout-btn" style="color: #ff4d4f; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem;"><i class="fas fa-sign-out-alt" style="width: 20px;"></i> Logout</a>
                         </div>
                     </div>
                 `;
@@ -218,6 +234,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Redirect to home page on logout
                     window.location.href = 'index.html';
                 });
+            }
+        }
+        
+        // Personalization & UX: Welcome Message and Eco-Dashboard
+        // Step 1: Get data from storage -> Step 2: Calculate lifetime CO2 -> Step 3: Display personalized greeting & impact
+        const heroHeading = document.querySelector('.hero h1');
+        const heroSubtitle = document.querySelector('.hero p');
+        
+        let totalCO2 = 0;
+        const historyStr = safeGetItem('marg_history');
+        if (historyStr) {
+            const history = JSON.parse(historyStr);
+            history.forEach(trip => {
+                if (trip.co2Saved) {
+                    totalCO2 += parseFloat(trip.co2Saved);
+                }
+            });
+        }
+        
+        if (heroHeading) {
+            heroHeading.innerHTML = `Welcome back, ${currentUser.name.split(' ')[0]}! <span class="highlight">Save Nature.</span>`;
+            if (heroSubtitle && totalCO2 > 0) {
+                heroSubtitle.innerHTML = `You have saved <strong style="color: #28a745;">${totalCO2.toFixed(1)} kg</strong> of CO₂ total. Join the green revolution with मार्ग Way.`;
             }
         }
     }

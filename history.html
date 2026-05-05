@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking History — मार्ग Way</title>
+    <meta name="description" content="View your past bookings and sustainability impact on मार्ग Way." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .history-table th, .history-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .history-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #0b1120;
+        }
+        .history-table tr:last-child td {
+            border-bottom: none;
+        }
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-route"></i>
+                <span>मार्ग Way</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book Cab</a></li>
+                <li><a href="rent.html">Rent EV</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-cta">Login/Signup</a></li>
+            </ul>
+            <label for="nav-toggle" class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-history"></i> Booking History</h1>
+            <p>View your past rides and the positive impact you've made on nature.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>History</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HISTORY TABLE ========== -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title">Your Green Journey</h2>
+            <div id="history-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Service</th>
+                            <th>Vehicle</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Sustainability</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+                <div id="empty-history" style="display: none; text-align: center; padding: 40px; color: #8892a4; background: #fff; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <i class="fas fa-box-open" style="font-size: 3rem; margin-bottom: 15px; color: #e8ecf4;"></i><br>
+                    You have no completed bookings yet.<br>
+                    <a href="book.html" style="color: #1a6dff; text-decoration: underline; font-weight: bold; margin-top: 10px; display: inline-block;">Book a ride now!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-logo">
+                        <i class="fas fa-route"></i>
+                        <span>मार्ग Way</span>
+                    </a>
+                    <p>Saving nature, one ride at a time. मार्ग Way is your 100% electric travel partner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="book.html">Book EV</a></li>
+                        <li><a href="rent.html">Rent EV</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="book.html">Electric Cabs</a></li>
+                        <li><a href="rent.html">EV Rentals</a></li>
+                        <li><a href="rent.html">E-Bikes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> hello@margway.com</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="contact.html"><i class="fas fa-location-dot"></i> Chitkara University, Punjab</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 मार्ग Way. All rights reserved. 100% Electric, 0% Emissions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/history.js"></script>
+</body>
+</html>
