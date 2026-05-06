@@ -200,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         </a>
                         <div class="dropdown-content" style="display: none; position: absolute; top: 100%; right: 0; background-color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-radius: 12px; z-index: 9999; min-width: 160px; overflow: hidden; margin-top: 5px; border: 1px solid #eee;">
                             <a href="history.html" style="color: #333; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0;"><i class="fas fa-history" style="width: 20px;"></i> Booking History</a>
-                            <a href="#" style="color: #333; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0;"><i class="fas fa-cog" style="width: 20px;"></i> Profile Settings</a>
                             <a href="#" id="logout-btn" style="color: #ff4d4f; padding: 12px 20px; text-decoration: none; display: block; font-weight: 500; font-size: 0.95rem;"><i class="fas fa-sign-out-alt" style="width: 20px;"></i> Logout</a>
                         </div>
                     </div>
@@ -254,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         if (heroHeading) {
-            heroHeading.innerHTML = `Welcome back, ${currentUser.name.split(' ')[0]}! <span class="highlight">Save Nature.</span>`;
+            heroHeading.innerHTML = `Hey ${currentUser.name.split(' ')[0]}! <span class="highlight">Ready to save nature?</span>`;
             if (heroSubtitle && totalCO2 > 0) {
                 heroSubtitle.innerHTML = `You have saved <strong style="color: #28a745;">${totalCO2.toFixed(1)} kg</strong> of CO₂ total. Join the green revolution with मार्ग Way.`;
             }
