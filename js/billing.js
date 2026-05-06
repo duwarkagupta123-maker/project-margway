@@ -81,6 +81,13 @@ function confirmPayment() {
         let history = JSON.parse(localStorage.getItem("marg_history")) || [];
         currentBooking.status = "Completed";
         currentBooking.paymentDate = new Date().toISOString();
+        
+        const currentUserStr = localStorage.getItem("marg_currentUser");
+        if (currentUserStr) {
+            const currentUser = JSON.parse(currentUserStr);
+            currentBooking.userEmail = currentUser.email;
+        }
+
         // Step 3: Push current booking to history and save
         history.push(currentBooking);
         localStorage.setItem("marg_history", JSON.stringify(history));

@@ -244,7 +244,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let totalCO2 = 0;
         const historyStr = safeGetItem('marg_history');
         if (historyStr) {
-            const history = JSON.parse(historyStr);
+            let history = JSON.parse(historyStr);
+            history = history.filter(trip => trip.userEmail === currentUser.email);
             history.forEach(trip => {
                 if (trip.co2Saved) {
                     totalCO2 += parseFloat(trip.co2Saved);

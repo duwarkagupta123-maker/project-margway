@@ -3,14 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const emptyHistory = document.getElementById("empty-history");
     const historyTable = document.querySelector(".history-table");
 
+    const currentUserStr = localStorage.getItem("marg_currentUser");
+    let currentUserEmail = null;
+    if (currentUserStr) {
+        const currentUser = JSON.parse(currentUserStr);
+        currentUserEmail = currentUser.email;
+    } else {
+        window.location.href = "login.html";
+        return;
+    }
+
     const historyStr = localStorage.getItem("marg_history");
-    if (!historyStr || JSON.parse(historyStr).length === 0) {
+    let history = historyStr ? JSON.parse(historyStr) : [];
+    
+    history = history.filter(booking => booking.userEmail === currentUserEmail);
+
+    if (history.length === 0) {
         if (historyTable) historyTable.style.display = "none";
         if (emptyHistory) emptyHistory.style.display = "block";
         return;
     }
-
-    const history = JSON.parse(historyStr);
     
     history.reverse().forEach(booking => {
         const tr = document.createElement("tr");
